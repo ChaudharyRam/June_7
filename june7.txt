@@ -1,0 +1,91 @@
+Abstract class:
+		public abstract void display();
+	-method should be abstract 
+	-It uses extends keywords
+	-Can't make object of abstract class.
+	-Abstract method should be inherit into child
+	class
+
+Real life: Abstract class:(Travel)
+		abstract class Manager:
+			public abstract void getCustomer();
+			public abstract void getCountries();
+			public abstract void getData();
+		class Employee extends Manager
+		{
+			@Override
+			public void getCustomer(){};
+			@Override
+			public void getCountries(){};
+			@Override	
+			public void getData(){};
+			
+		}
+		
+package constructor_notes;
+abstract class NRB_Bank
+{
+   public abstract int interestRate();
+}
+class Prabhu extends NRB_Bank
+{
+    public  int interestRate(){
+    return 7; 
+    };
+}
+class KumariBank extends NRB_Bank
+{
+    public  int interestRate(){
+        return 8;
+    };
+}
+class SanimaBank extends NRB_Bank
+{
+    public  int interestRate(){
+        return 9;
+    };
+}
+public class AbstractClass3 {
+    public static void main(String[] args) {
+      NRB_Bank n1= new KumariBank();
+        System.out.println(n1.interestRate());
+        
+     NRB_Bank n2=new Prabhu();
+        System.out.println(n2.interestRate());
+        
+     NRB_Bank n3=new SanimaBank();
+     System.out.println(n3.interestRate());
+      
+    }
+    
+}
+++++++++++++++++++++++++
+
+package constructor_notes;
+abstract class Book
+{
+    public abstract void getBookId();
+    public abstract void getBookName();
+ }
+class Library extends Book
+{
+        public void getBookId()
+        {
+            System.out.println("Book id 123");
+        }
+        public  void getBookName(){
+            System.out.println("Book name is=Java");
+        }
+}
+
+public class AbstractClassExample {
+    public static void main(String[] args) {
+        Library l1=new Library();
+        l1.getBookId();
+        l1.getBookName();
+    }
+}
+		
+			
+			
+
