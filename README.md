@@ -1,1 +1,1 @@
-# June_7
+Abstract class and its abstract function
